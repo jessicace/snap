@@ -1,0 +1,5 @@
+<h1><%= @album.title %><h1>
+<h2>Edit Current Photo</h2>
+<%= image_tag(@photo.image.url) %>
+<%= render partial: 'form' %>
+<%= link_to "Cancel", album_path(@album) %>

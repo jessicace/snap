@@ -1,0 +1,15 @@
+<h2>Album: <%= @album.title %> </h2>
+<figure>
+	<%= image_tag(@photo.image.url) %>
+		<figcaption>
+			<%= @photo.description %>
+		</figcaption>
+</figure>
+<nav>
+	<p> <%= @photo.higher_item %> </p>
+	<%= link_to('Index', album_path(@album)) %>
+	<br>
+	<%= link_to('Edit', edit_album_photo_path(@album, @photo)) %>
+	<br>
+	<%= link_to('Delete', album_photo_path(@album, @photo), method: :delete, confirm: "Are you sure?") %>
+</nav>

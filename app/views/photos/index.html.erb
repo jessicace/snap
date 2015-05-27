@@ -1,0 +1,8 @@
+<h1><%= @album.title %></h1>
+
+<dl>
+	<% @photos.each do |photo| %>
+		<dt><%= photo.filename %></dt>
+		<dd><%= photo.description %></dd>
+	<% end %>
+</dl>

@@ -1,0 +1,14 @@
+<%= form_for [@album, @photo] do |form| %>
+	<%= form.label :image %>
+	<%= form.file_field :image %><br>
+	<%= form.label :remove_image %>
+	<%= form.check_box :remove_image %>
+	<br>
+	<%= form.label :description %>
+	<%= form.text_area :description %>
+	<br>
+	<%= form.label :remote_image_url %>
+  <%= form.text_field :remote_image_url %>
+	<br>
+	<%= form.submit %>
+<% end %>

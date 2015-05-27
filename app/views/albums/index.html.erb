@@ -1,0 +1,14 @@
+<h2>Albums</h2>
+<hr>
+
+<nav>
+	<ul>
+		<li><%= link_to("New Album", new_album_path) %></li>
+	</ul>
+</nav>
+
+<ul>
+	<% @albums.each do |album| %>
+		<li><%= link_to(album.title, album_path(album)) %></li>
+	<% end %>
+</ul>	

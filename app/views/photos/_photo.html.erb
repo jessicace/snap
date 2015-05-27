@@ -1,0 +1,8 @@
+<div id="<%= photo.position %>" class="carousel-item">
+  <h2><%= photo.description %></h2>
+  <%= image_tag(photo.image.url) %>
+	<% embed = "#{photo.position - 1}_photo" %>
+	<a class='arrow arrow-prev' href='#<%= embed %>'>Previous</a>
+	<% embed = "#{photo.position + 1}_photo" %>
+	<a class='arrow arrow-next' href='#<%= embed %>'>Next</a>
+</div>

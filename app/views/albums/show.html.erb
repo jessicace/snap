@@ -1,0 +1,16 @@
+<h1>
+	<%= @album.title %>
+</h2>
+	
+<%= link_to("Delete", album_path(@album), method: :delete, confirm: "Are you sure?") %>
+<%= link_to("Edit", edit_album_path(@album)) %>
+<%= link_to("Index", albums_path) %>
+<%= link_to("Add photo", new_album_photo_path(@album)) %>
+
+<div class="carousel-wrapper" style="height: 400px;">
+	<% @album.photos.each do |photo| %>
+		<span id="<%= photo.position %>_photo"></span>
+	<% end %>
+	<%= render @album.photos%>
+</div>
+	
