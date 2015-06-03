@@ -27,8 +27,9 @@ ActiveRecord::Schema.define(version: 20150526042708) do
     t.integer  "album_id"
     t.text     "filename"
     t.text     "description"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.integer  "views",       default: 0
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
     t.text     "image"
     t.integer  "position"
   end
