@@ -7,10 +7,10 @@ class PhotosController < ApplicationController
   end
 
   def show
+    @photo.increment!(:views)
   end
 
-  def edit
-  end
+  def edit; end
 
   def new
     @photo = Photo.new
@@ -21,7 +21,7 @@ class PhotosController < ApplicationController
     if @photo.save
       redirect_to album_path(@album), notice: 'Added new photo.'
     else
-      render :new, notice: 'Validation failed.'
+      render :new
     end
   end
 
